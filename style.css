@@ -20,7 +20,7 @@
 
 .jumbotron{
     font-family: ' Viga';
-    background-image: url("https://raw.githubusercontent.com/willamjonathan2/EH1/main/img/background.png");
+    background-image: url('https://raw.githubusercontent.com/willamjonathan2/EH1/main/img/background.png');
     background-size: cover;
     height: 540px;
     text-align:center;
