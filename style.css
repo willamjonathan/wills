@@ -24,7 +24,6 @@
     background-size: cover;
     height: 540px;
     text-align:center;
-    margin-left:-200px;
 
 }
 .jumbotron::after {
@@ -35,8 +34,7 @@
     background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
     position:absolute;
     bottom:0;
-    margin-left:200px;
-    
+
 
 }
 .jumbotron .container{
@@ -150,11 +148,11 @@
     .jumbotron{
         margin-top:-75px;
         height: 640px;
-        margin-left:0px;
+
 
     }
     .jumbotron::after{
-        margin-left:0px;
+
     }
     .jumbotron .display-4{
         font-size:62px;
