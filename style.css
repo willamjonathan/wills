@@ -1,175 +1,388 @@
-/* MY CSS */
-
-/* NAVBAR */
-.navbar{
-    position: relative;
-    z-index:1;
-}
-
-.navbar-brand{
-    font-family: 'Anton', sans-serif;
-    font-size:32px;
-
-}
-
-.tombol{
-    text-transform:uppercase;
-    border-radius:40px;
-
-}
-
-.jumbotron{
-    font-family: ' Viga';
-    background-image: url('https://raw.githubusercontent.com/willamjonathan2/EH1/main/img/background.png');
+body {
+    background-color: #f1ece3;
+    color: black;
+    margin: 0;
+    font-family: "Tenali Ramakrishna", sans-serif;
+    border: 10px solid #EADDCA;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    background-image: url(code/img/cek.jpg);
     background-size: cover;
-    height: 540px;
-    text-align:center;
-
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.jumbotron::after {
-    content:'';
-    display:block;
-    width:100%;
-    height:100%;
-    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-    position:absolute;
-    bottom:0;
 
+/* Navbar styles */
+.navbar {
+    background-color: #b6a88d;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
 
-}
-.jumbotron .container{
-    position:relative;
-    z-index:1;
-}
-.jumbotron .display-4{
+.dropdown-toggle {
+    display: none;
     color: white;
-    font-size:40px;
-    margin-top:150px;
-    font-weight:200px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6)
-    margin-bottom: 30px;
-
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Viga', sans-serif;
+    text-align: left;
+    background-image: url(code/img/icon/menu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 10px;
 }
 
-.jumbotron .display-4 span{
-    font-weight:600;
-    color:grey;
-    
+/* Nav list styles */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    gap: 2em;
 }
 
-.info-panel{
-    box-shadow: 0 3px 20px rgba(0,0,0,0.5);
-    border-radius: 12px;
-    background-color:white;
-    margin-top:-120px;
-    padding:30px;
-
-}
-.info-panel img{
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-
-}
-.info-panel h4{
-    font-size:16px;
-    text-transform:uppercase;
-    font-weight:bold; 
-    margin-top:5px;
-
-}
-.info-panel p{
-    font-size:14px;
-    margin-top:-5px;
-    font-weight:200;
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Viga', sans-serif;
+    transition: all 0.3s ease-in-out;
 }
 
-/* mba */
-.mba{
-    margin-top:120px;
+.nav-item a:hover {
+    color: #333;
+    background-color: #EADDCA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+/* Name Styles */
+.name {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-size: 50px;
+    margin-top: 3vh;
     text-align: center;
+    margin-bottom: 3vw;
+    color: #333;
+    letter-spacing: 2px;
+    color: #a28d6e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+    opacity: 0;
+    /* Initially hidden */
+    animation: slideup-fade 1s ease-out forwards;
+    /* Use forwards to keep the final state */
 }
-.mba h3{
-    text-transform:uppercase;
-    nargin-top:30px;
-    font-weight:200;
-    font-size:53px;
 
-}
-.mba h3 span{
-    font-weight:500;
+.name:hover {
+    /* color: #ff7e5f; */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
-.quotes{
-    margin-top:100px;
-    
+/* Parent container for Location and DOB */
+
+.what {
+    display: flex;
+    /* Enable flex layout */
+    flex-direction: row;
+    /* Arrange items in a row */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    height: 100%;
+    gap: 10px;
+    /* Ensure it takes full height of the parent container */
 }
-.quotes h5{
+
+
+
+/* Location and DOB Styles */
+.location,
+.dob {
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 18px;
+    color: #444;
     text-align: center;
-    font-weight:200;
-    font-style:italic;
-    font-size:24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    display: inline-block;
+    background-color: #eaddca;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    /* Initially hidden */
+    animation: slideup-fade 1s ease-out forwards;
+    /* Use forwards to keep the final state */
+}
+
+.location-logo {
+    width: 24px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 8px;
+    /* Space between image and text */
+}
+
+.dob-logo {
+    width: 24px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 8px;
+    /* Space between image and text */
+}
+
+.location {
+    animation-delay: 0.5s;
+    /* Delay for location */
+}
+
+.dob {
+    animation-delay: 1s;
+    /* Delay for DOB */
+}
+
+/* Hover Effects */
+.location:hover,
+.dob:hover {
+    color: white;
+    background-color: #a28d6e;
+    transform: scale(1.05);
+}
+
+/* Summary Styles */
+.summary {
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+    margin: 20px auto;
+    padding: 10px 20px;
+    line-height: 1.6;
+    background-color: #eaddca;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    max-width: 800px;
+    text-indent: 30px;
+    opacity: 0;
+    /* Initially hidden */
+    animation: slideup-fade 1s ease-out forwards;
+    /* Use forwards to keep the final state */
+    animation-delay: 1.5s;
+    /* Delay for summary */
+}
+
+.summary:hover {
+    background-color: #a28d6e;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* .container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    gap: 5px;
+    background-color: blue;
+} */
+
+.container1 {
+    /* width: 35%; */
+    /* height: 300px; */
+}
+
+.container2 {
+    margin-top: 20px;
+    width: 40%;
+    /* width: 40%; */
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #EADDCA;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #eaddca;
+    background-image: url(code/img/index.jpg);
+    opacity: 0;
+    /* Initially hidden */
+    animation: slideup-fade 1s ease-out forwards;
+    /* Use forwards to keep the final state */
+    animation-delay: 1.5s;
+    /* Delay for summary */
+}
+
+
+.container2:hover {
+    background-color: #a28d6e;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+
+.form__button {
+    font-family: 'Viga', sans-serif;
+    font-size: 1rem;
+    background-color: #EADDCA;
+    color: grey;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    opacity: 0;
+    /* Initially hidden */
+    animation: slideup-fade 1s ease-out forwards;
+    /* Use forwards to keep the final state */
+    animation-delay: 2s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
 
 }
 
-.quotes p{
+.form__button a {
+    text-decoration: none;
+    /* Remove default underline */
+    color: black;
+    /* Set text color */
+    display: block;
+    /* Ensure the anchor tag fills the button */
+    height: 100%;
+    /* Make sure the anchor covers the button height */
+    width: 100%;
+    /* Make sure the anchor covers the button width */
     text-align: center;
-    font-weight:100;
-    font-style:italic;
-    font-size:12px;
+    /* Center the text inside the anchor */
+    line-height: 1.5;
+    /* Adjust line height for vertical centering */
+}
 
+.form__button:hover {
+    background-color: #a28d6e;
+    /* Change background on hover */
+    transform: scale(1.05);
+    /* Slightly scale up */
+    color: white;
+    /* Change text color on hover */
 }
-.quotes p span{
-    font-size:6px;
+
+.form__button a:hover {
+    color: white;
+    /* Change anchor text color on hover */
 }
-/* DEKSTOP VERSION */
-@media (min-width: 992px){
-    
-    .nav-link{
-        color: white !important;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.7)
+
+
+/* Slide Up and Fade Animation */
+@keyframes slideup-fade {
+    0% {
+        transform: translateY(1000px);
+        /* Start from 1000px below */
+        opacity: 0;
+        /* Initially hidden */
     }
-    .nav-link{
-        text-transform: uppercase;
-        margin-right:30px; 
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+        /* Fully visible */
     }
-    .nav-link:hover::after{
-        content: '';
-        display:block;
-        border-bottom:3px solid #0B63DC;
-        width:50%;
+}
+
+@media (max-width: 768px) {
+    .dropdown-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        display: none;
+        gap: 1em;
+    }
+
+    .nav-item a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .summary {
+        margin: 20px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .container2 {
+        height: 200px;
+        width: 80%;
+        /* Set width for smaller screens */
+        margin: 20px auto;
+        /* Center the container */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center items horizontally */
         margin: auto;
-        padding-bottom:5px;
-        margin-bottom:-8px;
-
-
-    }
-    .jumbotron{
-        margin-top:-75px;
-        height: 640px;
-
-
-    }
-    .jumbotron::after{
-
-    }
-    .jumbotron .display-4{
-        font-size:62px;
-        /* font-border:10px solid black; */
+        width: 100%;
+        /* Ensure it takes full width */
     }
 
-    .mba{
-        text-align:left;
+    .container1 {
+        width: 80%;
+        /* Set width for container1 */
+        margin: 20px auto;
+        /* Center the container */
     }
-    .quotes h5{
-        font-size:32px;
 
+    .container2 {
+        width: 80%;
     }
-    .quotes p{
-        font-size: 16px;
+
+    .what {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .quotes p span{
-        font-size: 8px;
+
+    .form__button {
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) {
+    .name {
+        width: 700px;
     }
 }

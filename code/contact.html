@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Viga&display=swap" rel="stylesheet">
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Modak&family=Tenali+Ramakrishna&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="dropdown-toggle" id="dropdownToggle"></div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="../index.html">Home</a></li>
+            <li class="nav-item"><a href="project.html">Project</a></li>
+            <li class="nav-item"><a href="information.html">Information</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+    <!-- NAVBAR -->
+    <div class="judul">Contact Me</div>
+    <div class="summary">I’m always excited to connect with like-minded individuals, whether it’s to discuss potential
+        work opportunities, share insights, or collaborate on innovative projects. If you have any questions, feedback,
+        or ideas, feel free to reach out. Let's explore how we can work together to drive progress in the dynamic field
+        of computer science.
+    </div>
+
+    <form id="contact"
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1bXgLFeeVk3lv_HGyBDqRtYVexx9kfWZokub4Gc4qkh641A/formResponse"
+        method="POST" target="hidden_iframe" onsubmit="handleSubmit()">
+        <div class="form__group name-group">
+            <div class="name-field">
+                <input type="text" class="form__field" placeholder="First Name" name="entry.584583895" id="first_name"
+                    required />
+                <label for="first_name" class="form__label">First Name</label>
+            </div>
+            <div class="name-field">
+                <input type="text" class="form__field" placeholder="Last Name" name="entry.1888594087" id="last_name"
+                    required />
+                <label for="last_name" class="form__label">Last Name</label>
+            </div>
+        </div>
+        <div class="form__group field">
+            <input type="email" class="form__field" placeholder="Email" name="entry.199882941" id="email" required />
+            <label for="email" class="form__label">Email</label>
+        </div>
+        <div class="form__group field">
+            <input type="text" class="form__field" placeholder="Subject" name="entry.1256538957" id="subject"
+                required />
+            <label for="subject" class="form__label">Subject</label>
+        </div>
+        <div class="form__group field">
+            <textarea class="form__field" placeholder="Message" name="entry.1018729991" id="message"
+                required></textarea>
+            <label for="message" class="form__label">Message</label>
+        </div>
+        <div class="form__group">
+            <button type="submit" class="form__button">Submit</button>
+        </div>
+    </form>
+
+    <div class="container">
+        <div class="contactcontainer">
+
+            <div class="icon linkedin"></div>
+            <div class="text"><a href="https://www.instagram.com/willjo02?igsh=MWxsNnNlYWc0cGRhaw==">Instargram </a>
+            </div>
+
+        </div>
+        <div class="contactcontainer">
+            <div class="icon whatsapp"></div>
+            <div class="text"><a href="Wa.me/+628112002800">WhatsApp </a></div>
+        </div>
+
+    </div>
+
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        var dropdownToggle = document.getElementById("dropdownToggle");
+        var navList = document.getElementById("navList");
+
+        dropdownToggle.onclick = function () {
+            navList.classList.toggle("show");
+        }
+
+        function handleSubmit() {
+            alert("Your message has been sent successfully!");
+            document.getElementById("contact").reset();
+        }
+    </script>
+
+</body>
+
+</html>
