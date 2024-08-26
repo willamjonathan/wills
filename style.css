@@ -13,7 +13,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Navbar styles */
 .navbar {
     background-color: #b6a88d;
     padding: 1em 0;
@@ -39,7 +38,6 @@ body {
     margin-left: 10px;
 }
 
-/* Nav list styles */
 .nav-list {
     list-style: none;
     margin: 0;
@@ -64,7 +62,6 @@ body {
     border-radius: 4px;
 }
 
-/* Name Styles */
 .name {
     font-family: "Modak", system-ui;
     font-weight: 400;
@@ -72,43 +69,29 @@ body {
     margin-top: 3vh;
     text-align: center;
     margin-bottom: 3vw;
-    color: #333;
-    letter-spacing: 2px;
     color: #a28d6e;
+    letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
     margin: auto;
     opacity: 0;
-    /* Initially hidden */
     animation: slideup-fade 1s ease-out forwards;
-    /* Use forwards to keep the final state */
 }
 
 .name:hover {
-    /* color: #ff7e5f; */
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
 }
 
-/* Parent container for Location and DOB */
-
 .what {
     display: flex;
-    /* Enable flex layout */
     flex-direction: row;
-    /* Arrange items in a row */
     align-items: center;
-    /* Center vertically */
     justify-content: center;
-    /* Center horizontally */
     height: 100%;
     gap: 10px;
-    /* Ensure it takes full height of the parent container */
 }
 
-
-
-/* Location and DOB Styles */
 .location,
 .dob {
     font-family: 'Tenali Ramakrishna', sans-serif;
@@ -124,40 +107,29 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0;
-    /* Initially hidden */
     animation: slideup-fade 1s ease-out forwards;
-    /* Use forwards to keep the final state */
 }
 
 .location-logo {
     width: 24px;
-    /* Adjust the width as needed */
     height: auto;
-    /* Maintain aspect ratio */
     margin-right: 8px;
-    /* Space between image and text */
 }
 
 .dob-logo {
     width: 24px;
-    /* Adjust the width as needed */
     height: auto;
-    /* Maintain aspect ratio */
     margin-right: 8px;
-    /* Space between image and text */
 }
 
 .location {
     animation-delay: 0.5s;
-    /* Delay for location */
 }
 
 .dob {
     animation-delay: 1s;
-    /* Delay for DOB */
 }
 
-/* Hover Effects */
 .location:hover,
 .dob:hover {
     color: white;
@@ -165,7 +137,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Summary Styles */
 .summary {
     font-family: 'Tenali Ramakrishna', sans-serif;
     font-size: 20px;
@@ -181,11 +152,8 @@ body {
     max-width: 800px;
     text-indent: 30px;
     opacity: 0;
-    /* Initially hidden */
     animation: slideup-fade 1s ease-out forwards;
-    /* Use forwards to keep the final state */
     animation-delay: 1.5s;
-    /* Delay for summary */
 }
 
 .summary:hover {
@@ -195,24 +163,11 @@ body {
     transform: scale(1.02);
 }
 
-/* .container {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin: auto;
-    gap: 5px;
-    background-color: blue;
-} */
-
-.container1 {
-    /* width: 35%; */
-    /* height: 300px; */
-}
+.container1 {}
 
 .container2 {
     margin-top: 20px;
     width: 40%;
-    /* width: 40%; */
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -227,13 +182,9 @@ body {
     background-color: #eaddca;
     background-image: url(code/img/index.jpg);
     opacity: 0;
-    /* Initially hidden */
     animation: slideup-fade 1s ease-out forwards;
-    /* Use forwards to keep the final state */
     animation-delay: 1.5s;
-    /* Delay for summary */
 }
-
 
 .container2:hover {
     background-color: #a28d6e;
@@ -241,7 +192,6 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
 }
-
 
 .form__button {
     font-family: 'Viga', sans-serif;
@@ -258,59 +208,40 @@ body {
     max-width: 500px;
     margin: 20px auto;
     opacity: 0;
-    /* Initially hidden */
     animation: slideup-fade 1s ease-out forwards;
-    /* Use forwards to keep the final state */
     animation-delay: 2s;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
-
 }
 
 .form__button a {
     text-decoration: none;
-    /* Remove default underline */
     color: black;
-    /* Set text color */
     display: block;
-    /* Ensure the anchor tag fills the button */
     height: 100%;
-    /* Make sure the anchor covers the button height */
     width: 100%;
-    /* Make sure the anchor covers the button width */
     text-align: center;
-    /* Center the text inside the anchor */
     line-height: 1.5;
-    /* Adjust line height for vertical centering */
 }
 
 .form__button:hover {
     background-color: #a28d6e;
-    /* Change background on hover */
     transform: scale(1.05);
-    /* Slightly scale up */
     color: white;
-    /* Change text color on hover */
 }
 
 .form__button a:hover {
     color: white;
-    /* Change anchor text color on hover */
 }
 
-
-/* Slide Up and Fade Animation */
 @keyframes slideup-fade {
     0% {
         transform: translateY(1000px);
-        /* Start from 1000px below */
         opacity: 0;
-        /* Initially hidden */
     }
 
     100% {
         transform: translateY(0%);
         opacity: 1;
-        /* Fully visible */
     }
 }
 
@@ -344,26 +275,20 @@ body {
     .container2 {
         height: 200px;
         width: 80%;
-        /* Set width for smaller screens */
         margin: 20px auto;
-        /* Center the container */
     }
 
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Center items horizontally */
         margin: auto;
         width: 100%;
-        /* Ensure it takes full width */
     }
 
     .container1 {
         width: 80%;
-        /* Set width for container1 */
         margin: 20px auto;
-        /* Center the container */
     }
 
     .container2 {
